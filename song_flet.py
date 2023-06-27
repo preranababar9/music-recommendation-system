@@ -9,14 +9,14 @@ def main(page):
         e.control.checked = not e.control.checked
         page.update()
     page.appbar = ft.AppBar(
-        leading=ft.Icon(ft.icons.LIBRARY_MUSIC_ROUNDED),
+        leading=ft.Icon(ft.icons.LIBRARY_MUSIC_OUTLINED),
         leading_width=40, 
-        title=ft.Text("Song Recommend", size=15, italic=True),
+        title=ft.Text("Song Recommend", size=18, italic=True),
         center_title=False,
-        bgcolor=ft.colors.SURFACE_VARIANT,
+        bgcolor=ft.colors.LIGHT_BLUE_ACCENT,
         actions=[
-            ft.IconButton(ft.icons.WB_SUNNY_OUTLINED),
-            ft.IconButton(ft.icons.FILTER_3),
+            ft.IconButton(ft.icons.NOTIFICATIONS_NONE),
+            ft.IconButton(ft.icons.PLAY_CIRCLE),
             ft.PopupMenuButton(
                 items=[
                     ft.PopupMenuItem(text="Item 1"),
@@ -52,11 +52,11 @@ def main(page):
     ###creating a navigation bar
     page.navigation_bar = ft.NavigationBar(
         destinations=[
-            ft.NavigationDestination(icon=ft.icons.HOME, label="Home", selected_icon=icons.HOME_SHARP),
-            ft.NavigationDestination(icon=ft.icons.SEARCH_SHARP, label="Search"),
+            ft.NavigationDestination(icon=ft.icons.HOME_FILLED, label="Home", selected_icon=icons.HOME_FILLED),
+            ft.NavigationDestination(icon=ft.icons.SEARCH_ROUNDED, label="Search"),
             ft.NavigationDestination(
-                icon=ft.icons.LIBRARY_BOOKS_ROUNDED,
-                selected_icon=ft.icons.LIBRARY_BOOKS_SHARP,
+                icon=ft.icons.MY_LIBRARY_MUSIC,
+                selected_icon=ft.icons.MY_LIBRARY_MUSIC,
                 label="Your library",
             ),
         ]
